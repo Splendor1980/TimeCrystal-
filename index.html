@@ -1,69 +1,144 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimeCrystal — Retium Prediction Market</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0ff; margin: 0; padding: 20px; }
-    .header { text-align: center; padding: 20px; background: linear-gradient(90deg, #6b00ff, #00f0ff); border-radius: 12px; margin-bottom: 30px; }
-    .crystal { background: #1a1a2e; border: 2px solid #6b00ff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-    .title { font-size: 1.5em; margin: 0 0 10px 0; color: #00f0ff; }
-    .outcomes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 15px; }
-    .outcome { background: #16213e; padding: 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
-    .outcome:hover { background: #6b00ff; transform: scale(1.03); }
-    .status { font-size: 0.9em; color: #00ff9d; }
-    .footer { text-align: center; margin-top: 40px; color: #777; }
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      background: #0a0a14; 
+      color: #e0e0ff; 
+      margin: 0; 
+      padding: 20px; 
+    }
+    .header { 
+      text-align: center; 
+      padding: 30px; 
+      background: linear-gradient(90deg, #6b00ff, #00f0ff); 
+      border-radius: 16px; 
+      margin-bottom: 30px; 
+    }
+    .crystal { 
+      background: #1a1a2e; 
+      border: 2px solid #6b00ff; 
+      border-radius: 16px; 
+      padding: 25px; 
+      margin-bottom: 25px; 
+    }
+    .title { 
+      font-size: 1.6em; 
+      margin: 0 0 12px 0; 
+      color: #00f0ff; 
+    }
+    .outcomes { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap: 14px; 
+      margin-top: 15px; 
+    }
+    .outcome { 
+      background: #16213e; 
+      padding: 16px; 
+      border-radius: 10px; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+      font-size: 1.1em;
+    }
+    .outcome:hover { 
+      background: #6b00ff; 
+      transform: scale(1.05); 
+    }
+    .status { 
+      font-size: 0.95em; 
+      color: #00ff9d; 
+      margin-top: 10px; 
+    }
+    .emoji { 
+      font-size: 3em; 
+      text-align: center; 
+      margin: 15px 0; 
+      animation: pop 0.6s; 
+    }
+    @keyframes pop {
+      0% { transform: scale(0.2); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    .footer { 
+      text-align: center; 
+      margin-top: 50px; 
+      color: #777; 
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
     <h1>⏳ TimeCrystal</h1>
-    <p>Предсказательные рынки на Retium • Шуточный режим</p>
+    <p>Retium Prediction Markets • Fun Mode</p>
   </div>
 
-  <h2 style="text-align:center; color:#aaa;">Сегодня: 3 июля 2026</h2>
+  <h2 style="text-align:center; color:#aaa;">July 3, 2026</h2>
 
-  <!-- Кристалл 1 -->
+  <!-- Crystal 1 -->
   <div class="crystal">
     <div class="title">🔥 Word War — Word of the Day</div>
-    <p><strong>Какое слово победит сегодня?</strong></p>
+    <p><strong>Which word will win today?</strong></p>
     <div class="outcomes">
-      <div class="outcome">PrimeMesh — 42%</div>
-      <div class="outcome">TimeCrystal — 31%</div>
-      <div class="outcome">RAI — 27%</div>
+      <div class="outcome" onclick="celebrate(this)">PrimeMesh — 42%</div>
+      <div class="outcome" onclick="celebrate(this)">TimeCrystal — 31%</div>
+      <div class="outcome" onclick="celebrate(this)">RAI — 27%</div>
     </div>
-    <p class="status">Объём торгов: 1 240 RTM • До закрытия: 14 часов</p>
+    <p class="status">Volume: 1,240 RTM • Closes in 14 hours</p>
   </div>
 
-  <!-- Кристалл 2 -->
+  <!-- Crystal 2 -->
   <div class="crystal">
     <div class="title">🌐 Daily Mesh</div>
-    <p><strong>Статистика Discord за день</strong></p>
+    <p><strong>Discord Activity Today</strong></p>
     <div class="outcomes">
-      <div class="outcome">Новых пользователей: 12–25</div>
-      <div class="outcome">Сообщений: 1200–1800</div>
-      <div class="outcome">Упоминаний @RetiumChain: > 80</div>
+      <div class="outcome" onclick="celebrate(this)">New users: 12–25</div>
+      <div class="outcome" onclick="celebrate(this)">Messages: 1,200–1,800</div>
+      <div class="outcome" onclick="celebrate(this)">@RetiumChain mentions: > 80</div>
     </div>
-    <p class="status">Объём торгов: 890 RTM • До закрытия: 14 часов</p>
+    <p class="status">Volume: 890 RTM • Closes in 14 hours</p>
   </div>
 
-  <!-- Кристалл 3 -->
+  <!-- Crystal 3 -->
   <div class="crystal">
     <div class="title">⚙️ Chain Reaction</div>
-    <p><strong>Многомерный Кристалл</strong></p>
+    <p><strong>Multidimensional Crystal</strong></p>
     <div class="outcomes">
-      <div class="outcome">Если @Mr.Fox > 50 раз → будет ли сообщение про RAI?</div>
-      <div class="outcome">Если «Validator» > 20 раз → сколько реакций на первое упоминание?</div>
+      <div class="outcome" onclick="celebrate(this)">If @Mr.Fox > 50 mentions → Will there be a RAI message tomorrow?</div>
+      <div class="outcome" onclick="celebrate(this)">If “Validator” > 20 times → How many reactions on first mention?</div>
     </div>
-    <p class="status">Объём торгов: 670 RTM • До закрытия: 14 часов</p>
+    <p class="status">Volume: 670 RTM • Closes in 14 hours</p>
   </div>
 
   <div class="footer">
-    <p>TimeCrystal Demo • Работает на PrimeMesh + RAI</p>
-    <p>Ставки — только тестовые токены. Для развлечения.</p>
+    <p>TimeCrystal Demo • Powered by PrimeMesh + RAI</p>
+    <p>Test mode — for fun only</p>
   </div>
+
+  <script>
+    function celebrate(el) {
+      const emojis = ['🚀', '🔥', '✨', '💎', '🧠', '⚡'];
+      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+      
+      const emojiDiv = document.createElement('div');
+      emojiDiv.className = 'emoji';
+      emojiDiv.textContent = randomEmoji;
+      el.parentElement.appendChild(emojiDiv);
+      
+      setTimeout(() => emojiDiv.remove(), 1500);
+      
+      // Simple alert for fun
+      if (Math.random() > 0.7) {
+        alert("Nice choice! 🎉 The community is watching...");
+      }
+    }
+  </script>
 
 </body>
 </html>
