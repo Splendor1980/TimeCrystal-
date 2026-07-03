@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeCrystal — Retium Prediction Market</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0ff; margin: 0; padding: 20px; }
+    .header { text-align: center; padding: 20px; background: linear-gradient(90deg, #6b00ff, #00f0ff); border-radius: 12px; margin-bottom: 30px; }
+    .crystal { background: #1a1a2e; border: 2px solid #6b00ff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .title { font-size: 1.5em; margin: 0 0 10px 0; color: #00f0ff; }
+    .outcomes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 15px; }
+    .outcome { background: #16213e; padding: 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .outcome:hover { background: #6b00ff; transform: scale(1.03); }
+    .status { font-size: 0.9em; color: #00ff9d; }
+    .footer { text-align: center; margin-top: 40px; color: #777; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>⏳ TimeCrystal</h1>
+    <p>Предсказательные рынки на Retium • Шуточный режим</p>
+  </div>
+
+  <h2 style="text-align:center; color:#aaa;">Сегодня: 3 июля 2026</h2>
+
+  <!-- Кристалл 1 -->
+  <div class="crystal">
+    <div class="title">🔥 Word War — Word of the Day</div>
+    <p><strong>Какое слово победит сегодня?</strong></p>
+    <div class="outcomes">
+      <div class="outcome">PrimeMesh — 42%</div>
+      <div class="outcome">TimeCrystal — 31%</div>
+      <div class="outcome">RAI — 27%</div>
+    </div>
+    <p class="status">Объём торгов: 1 240 RTM • До закрытия: 14 часов</p>
+  </div>
+
+  <!-- Кристалл 2 -->
+  <div class="crystal">
+    <div class="title">🌐 Daily Mesh</div>
+    <p><strong>Статистика Discord за день</strong></p>
+    <div class="outcomes">
+      <div class="outcome">Новых пользователей: 12–25</div>
+      <div class="outcome">Сообщений: 1200–1800</div>
+      <div class="outcome">Упоминаний @RetiumChain: > 80</div>
+    </div>
+    <p class="status">Объём торгов: 890 RTM • До закрытия: 14 часов</p>
+  </div>
+
+  <!-- Кристалл 3 -->
+  <div class="crystal">
+    <div class="title">⚙️ Chain Reaction</div>
+    <p><strong>Многомерный Кристалл</strong></p>
+    <div class="outcomes">
+      <div class="outcome">Если @Mr.Fox > 50 раз → будет ли сообщение про RAI?</div>
+      <div class="outcome">Если «Validator» > 20 раз → сколько реакций на первое упоминание?</div>
+    </div>
+    <p class="status">Объём торгов: 670 RTM • До закрытия: 14 часов</p>
+  </div>
+
+  <div class="footer">
+    <p>TimeCrystal Demo • Работает на PrimeMesh + RAI</p>
+    <p>Ставки — только тестовые токены. Для развлечения.</p>
+  </div>
+
+</body>
+</html>
